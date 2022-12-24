@@ -31,7 +31,7 @@ func getTodos(context *gin.Context) {
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // Add todos ---POST Method
-func addTodo(context *gin.Context) {
+func postTodo(context *gin.Context) {
 	var newTodo todo
  // using BindJson method to serialize todo or extract data
  // From []todo into newTodo
@@ -90,6 +90,6 @@ func main() {
 	router.GET("/todos", getTodos)  // Create endpoint for GET Method
 	router.GET("/todos/:id", getTodo)  // Create endpoint a specific id
 	router.PATCH("/todos/:id", updateTodoStatus)  // Create endpoint for PATCH Method
-	router.POST("/todos", addTodo)  // endpoint for POST method
+	router.POST("/todos", postTodo)  // endpoint for POST method
 	router.Run("localhost:9090")    // Run server
 }
