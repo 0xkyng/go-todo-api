@@ -46,6 +46,9 @@ func addTodo(context *gin.Context) {
 }
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// Function to utilised by handler get todo by id
 func getTodo(context *gin.Context) {
 	id := context.Param("id")
 	todo, err := getTodoById(id)
@@ -56,6 +59,7 @@ func getTodo(context *gin.Context) {
 
 	context.IndentedJSON(http.StatusOK, todo)
 }
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 //---------------------------------------------
 // Update todos
