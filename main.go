@@ -25,7 +25,7 @@ var todos = []todo {
 func getTodos(context *gin.Context) {
 	// Context contains info about the incoming
 	// http request
-	context.IndentedJSON(http.StatusOK, todos) // Converting []todo adta into json
+	context.IndentedJSON(http.StatusOK, todos) // Converting []todo data into json
 }
 ////////////////////////////////////////////////
 
