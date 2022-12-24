@@ -75,6 +75,8 @@ func updateTodoStatus(context *gin.Context) {
 }
 //---------------------------------------------
 
+//______________________________________________
+// Get todo by specific Id
 func getTodoById(id string) (*todo, error){
 	for i, t := range todos {
 		if t.ID == id {
@@ -84,6 +86,7 @@ func getTodoById(id string) (*todo, error){
 
 	return nil, errors.New("todo not found")
 }
+//_________________________________________________
 
 func main() {
 	router := gin.Default()         // Create server
