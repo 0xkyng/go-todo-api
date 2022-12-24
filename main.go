@@ -42,7 +42,7 @@ func addTodo(context *gin.Context) {
 
 	 todos = append(todos, newTodo)
 
-	 context.IndentedJSON(http.StatusCreated, newTodo)
+	 context.IndentedJSON(http.StatusCreated, newTodo) // returning newTodo
 }
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
