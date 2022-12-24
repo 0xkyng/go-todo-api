@@ -22,7 +22,9 @@ var todos = []todo {
 /////////////////////////////////////////////
 // Get todos ---GET Method
 func getTodos(context *gin.Context) {
-	context.IndentedJSON(http.StatusOK, todos)
+	// Context contains info about the incoming
+	// http request
+	context.IndentedJSON(http.StatusOK, todos) // Converting []todo to json
 }
 ////////////////////////////////////////////////
 
