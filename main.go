@@ -8,6 +8,7 @@ import (
 )
 
 type todo struct {
+	// json tag to de-serialize json todo
 	ID          string `json:"id"`
 	Item        string  `json:"item"`
 	Completed   bool     `json:"completed"`
@@ -32,7 +33,8 @@ func getTodos(context *gin.Context) {
 // Add todos ---POST Method
 func addTodo(context *gin.Context) {
 	var newTodo todo
-
+ // using BindJson method to serialize todo or extract data
+ // From []todo into newTodo
 	 err := context.BindJSON(&newTodo)
 	 if err != nil {
 		return
