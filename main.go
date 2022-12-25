@@ -62,6 +62,21 @@ func getTodo(context *gin.Context) {
 }
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+///////////////////////////////////////////////////////
+func checkOutTodo(context *gin.Context) {
+	id, ok := context.GetQuery("id")
+
+	if !ok {
+		context.IndentedJSON(http.StatusBadRequest, gin.H{"message": "Missing id query parameter"})
+		return
+	}
+
+	todo, err := getTodoById(id)
+
+
+}
+///////////////////////////////////////////////////////
+
 //---------------------------------------------
 // Update todos
 func updateTodoStatus(context *gin.Context) {
