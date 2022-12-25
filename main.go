@@ -78,7 +78,10 @@ func checkOutTodo(context *gin.Context) {
 		return
 	}
 
-	
+	// if todo.Quantity <= 0 {
+	// 	context.IndentedJSON(http.StatusBadRequest, gin.H{"message": "Todo not available"})
+	// 	return
+	// }
 
 
 }
