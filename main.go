@@ -73,6 +73,13 @@ func checkOutTodo(context *gin.Context) {
 
 	todo, err := getTodoById(id)
 
+	if err != nil {
+		context.IndentedJSON(http.StatusNotFound, gin.H{"message": "Todo not found"})
+		return
+	}
+
+	
+
 
 }
 ///////////////////////////////////////////////////////
