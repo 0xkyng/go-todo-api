@@ -62,30 +62,6 @@ func getTodo(context *gin.Context) {
 }
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-///////////////////////////////////////////////////////
-// func checkOutTodo(context *gin.Context) {
-// 	id, ok := context.GetQuery("id")
-
-// 	if !ok {
-// 		context.IndentedJSON(http.StatusBadRequest, gin.H{"message": "Missing id query parameter"})
-// 		return
-// 	}
-
-// 	todo, err := getTodoById(id)
-
-// 	if err != nil {
-// 		context.IndentedJSON(http.StatusNotFound, gin.H{"message": "Todo not found"})
-// 		return
-// 	}
-
-	// if todo.Quantity <= 0 {
-	// 	context.IndentedJSON(http.StatusBadRequest, gin.H{"message": "Todo not available"})
-	// 	return
-	// }
-
-// }
-///////////////////////////////////////////////////////
-
 //---------------------------------------------
 // Update todos
 func updateTodoStatus(context *gin.Context) {
